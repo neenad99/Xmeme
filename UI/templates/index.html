@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+       <title>X-Meme</title>
+    </head>
+
+    <body class="container">
+        <div class="jumbotron">
+            <h1>Meme Stream</h1>
+        </div>
+        <form id="formid">
+            <div class="mb-3">
+              <label for="nameinput" class="form-label">Name</label>
+              <input type="text" class="form-control" id="nameid" placeholder="Type your name">
+            </div>
+            <div class="mb-3">
+              <label for="urlinput" class="form-label">Url</label>
+              <input type="text" class="form-control" id="urlid" placeholder="Type meme url">
+            </div>
+            <div class="mb-3">
+                <label for="captioninput" class="form-label">Caption</label>
+                <input type="text" class="form-control" id="captionid" placeholder="Type caption for meme">
+              </div>
+            <button type="button" class="btn btn-primary" id="submitid">Submit Meme</button>
+            <button type="button" class="btn btn-primary" id="getmemeid">Get Latest Memes</button>
+          </form>
+          <div class="container" style="margin-top: 50px;">
+            <div class="row justify-content-center" id="memelistid"></div>
+          </div>
+
+          <div id="updateModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Update Meme</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-sm-4">
+                                        <label class="sr-only" for="exampleInputEmail3">Url</label>
+                                        <input type="text" class="form-control form-control-sm mr-1" id="updateurl" placeholder="Enter url">
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="exampleInputPassword3">Caption</label>
+                                    <input type="text" class="form-control form-control-sm mr-1" id="updatecaption" placeholder="Enter Caption">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary btn-sm ml-1" data-dismiss="modal" id="submitupdated">Submit</button>        
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+          <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+          <script src="../js/main.js"></script>
+    </body>
+</html>
