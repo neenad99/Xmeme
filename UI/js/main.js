@@ -2,22 +2,13 @@ const submitbtn = document.querySelector("#submitid");
 const getmemebtn = document.querySelector('#getmemeid');
 const memelist = document.querySelector('#memelistid');
 
-const domain = 'http://localhost:8081';
+const domain = 'ec2-15-207-98-41.ap-south-1.compute.amazonaws.com:8081';
 // const domain = 'https://xmeme-stream-1899.herokuapp.com';
 
 
 submitbtn.addEventListener('click',postmeme);
 getmemebtn.addEventListener('click',getmeme);
 
-function isURL(str) {
-    var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
-    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.?)+[a-z]{2,}|'+ // domain name
-    '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
-    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
-    '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
-    '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
-    return pattern.test(str);
-  }
 
   
 function showstatus(status,message){
