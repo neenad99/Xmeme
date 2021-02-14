@@ -5,15 +5,15 @@ const Memes = require('../models/mememodel');
 const app = express.Router();
 
 
-function isURL(str) {
-    var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
-    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.?)+[a-z]{2,}|'+ // domain name
-    '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
-    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
-    '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
-    '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
-    return pattern.test(str);
-  }
+// function isURL(str) {
+//     var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+//     '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.?)+[a-z]{2,}|'+ // domain name
+//     '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+//     '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+//     '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+//     '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+//     return pattern.test(str);
+//   }
 
 app.route('/')
 .get((req,res)=>{
@@ -38,10 +38,10 @@ app.route('/')
             res.json({status:'fail',message:'duplicate post of meme not allowed'});
         }
         else{
-            if(!isURL(req.body.url)){
-                res.statusCode=404;
-                res.json({status:'fail',message:'please input a valid url'});
-            }
+            // if(!isURL(req.body.url)){
+            //     res.statusCode=404;
+            //     res.json({status:'fail',message:'please input a valid url'});
+            // }
                   Memes.create(req.body)
                   .then((Meme)=>{
                       console.log('successfully uploaded meme\n',{"id":Meme._id});
