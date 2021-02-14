@@ -2,6 +2,7 @@
 
 # cd to the cloned repo directory
 
+cd ..
 
 # Run the user’s installation steps which will install any necessary dependencies required for the server to run, with sudo permission
 
@@ -29,19 +30,19 @@ chmod +x sleep.sh
 # Execute the GET /memes endpoint using curl to ensure your DB is in a clean slate
 
 # Should return an empty array.
-curl --location --request GET 'ec2-65-0-176-77.ap-south-1.compute.amazonaws.com:8081/memes'
+curl --location --request GET 'ec2-13-233-1-18.ap-south-1.compute.amazonaws.com:8081/memes'
 
 
 # Execute the POST /memes endpoint using curl
 
-curl --location --request POST 'ec2-65-0-176-77.ap-south-1.compute.amazonaws.com:8081/memes' --header 'Content-Type: application/json' --data-raw '{"name": "xyz","url": "abc.com","caption": "This is a meme"}'
+curl --location --request POST 'ec2-13-233-1-18.ap-south-1.compute.amazonaws.com:8081/memes' --header 'Content-Type: application/json' --data-raw '{"name": "xyz","url": "abc.com","caption": "This is a meme"}'
 
 
 # Execute the GET /memes endpoint using curl
 
-curl --location --request GET 'ec2-65-0-176-77.ap-south-1.compute.amazonaws.com:8081/memes'
+curl --location --request GET 'ec2-13-233-1-18.ap-south-1.compute.amazonaws.com:8081/memes'
 
 
 # If you have swagger enabled, make sure it is exposed at localhost:8080
 
-curl --location --request GET 'ec2-65-0-176-77.ap-south-1.compute.amazonaws.com:8080/swagger-ui/'
+curl --location --request GET 'ec2-13-233-1-18.ap-south-1.compute.amazonaws.com:8080/swagger-ui/'
