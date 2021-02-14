@@ -70,10 +70,7 @@ function postmeme(){
        showstatus('fail','fill all details first');
         return ;
     }
-    if(!isURL(urldata.value)){
-        showstatus('fail','please enter a valid url');
-        return ;
-    }
+    
     const name=namedata.value;
     const url=urldata.value;
     const caption=captiondata.value;
