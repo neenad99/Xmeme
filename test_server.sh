@@ -2,6 +2,7 @@
 
 # cd to the cloned repo directory
 
+cd ..
 
 # Run the user’s installation steps which will install any necessary dependencies required for the server to run, with sudo permission
 
