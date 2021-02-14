@@ -2,15 +2,13 @@ const submitbtn = document.querySelector("#submitid");
 const getmemebtn = document.querySelector('#getmemeid');
 const memelist = document.querySelector('#memelistid');
 
-const domain = 'http://ec2-15-207-98-41.ap-south-1.compute.amazonaws.com:8081';
+const domain = `http://${window.location.host}`;
 // const domain = 'https://xmeme-stream-1899.herokuapp.com';
 
 
 submitbtn.addEventListener('click',postmeme);
 getmemebtn.addEventListener('click',getmeme);
 
-
-  
 function showstatus(status,message){
     let classname='success';
     if(status=='fail'){
