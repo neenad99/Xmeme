@@ -20,7 +20,6 @@ chmod +rwx ~/.nvm/nvm.sh
 
 nvm install node
 
-
 node --version
 
 npm --version
