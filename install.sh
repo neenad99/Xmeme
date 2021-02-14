@@ -19,3 +19,5 @@ chmod +rwx ~/.nvm/nvm.sh
 . ~/.nvm/nvm.sh
 
 nvm install node
+
+sudo apt-get install npm 
