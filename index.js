@@ -13,7 +13,7 @@ const app = express();
 const swaggerApp = express();
 const port = 8081;
 const swaggerPort=8080;
-const url = process.env.LOCAL_MONGO_URI||'mongodb+srv://nani:8ZpmNvE4pFecSioI@xmeme.xdlub.mongodb.net/Xmeme?retryWrites=true&w=majority';
+const url = 'mongodb://ec2-15-207-98-41.ap-south-1.compute.amazonaws.com:27017/xmeme';
 
 app.use(bodyParser.json());
 app.use(morgan('dev'));
