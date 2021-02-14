@@ -2,7 +2,7 @@ const submitbtn = document.querySelector("#submitid");
 const getmemebtn = document.querySelector('#getmemeid');
 const memelist = document.querySelector('#memelistid');
 
-const domain = 'ec2-15-207-98-41.ap-south-1.compute.amazonaws.com:8081';
+const domain = 'http://localhost:8081';
 // const domain = 'https://xmeme-stream-1899.herokuapp.com';
 
 
