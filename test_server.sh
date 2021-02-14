@@ -8,7 +8,7 @@ cd ..
 
 chmod +x install.sh
 
-sudo ./install.sh
+sudo ./Xmeme/install.sh
 
 
 # 1. Run the user’s server execution steps which will bring up the server
@@ -17,14 +17,14 @@ sudo ./install.sh
 
 chmod +x server_run.sh
 
-./server_run.sh &
+./Xmeme/server_run.sh &
 
 
 # 3. Add a sleep timer to sleep.sh depending upon how long you want to sleep so that the server is ready.
 
 chmod +x sleep.sh
 
-./sleep.sh
+./Xmeme/sleep.sh
 
 
 # Execute the GET /memes endpoint using curl to ensure your DB is in a clean slate
